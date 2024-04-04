@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/favicons/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+  <title>Wood Services</title>
+  <meta name="description" content="">
+</head>
+<style>
+.swiper-slide{
+  background: linear-gradient(135deg, #4e5c62, #18afe1, #FFFFFF, #65c3e3, #073d52);
+height: 600px;
+  display: flex;
+}
+.swiper-slide img{
+  width: 50%;
+}
+.text-container{
+  width: 50%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.swiper {
+    padding-top: 50px;
+}
+.fire_img{
+  width: 35%;
+  margin: 0 auto;
+}
+.swiper-slide .fire_img {
+    width: 35%;
+}
+.additional-words span{
+  text-transform: uppercase;
+}
+.caption {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 18px;
+}
+.caption{
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.caption p{
+  margin-top: 20px;
+}
+.additional-words{
+  padding: 40px 10px;
+}
+.additional-words span{
+  padding: 40px;
+}
+.service-offering{
+  display: flex;
+}
+.service-info{
+     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: center;
+    padding-left: 200px;
+}
+
+.service-image{
+  width: 50%; /* Зробити картинку розміром контейнера */
+  height: 100%; /* Зробити картинку розміром контейнера */
+
+}
+.service-image img{
+  width: 100%; /* Зробити картинку розміром контейнера */
+  height: 100%; /* Зробити картинку розміром контейнера */
+  object-fit: cover; /* Заповнити контейнер, зберігаючи пропорції та вирівнюючи за шириною або висотою */
+  object-position: center; /* Вирівняти картинку по центру контейнера */
+}
+.service-info span{
+  text-decoration: underline;
+  text-decoration-color: #007aff;
+  text-decoration-thickness: 4px;
+}
+.service-info h2{
+  font-size: 32px;
+    padding-bottom: 50px;
+}
+.service-info ul li {
+    font-size: 28px;
+    margin-bottom: 30px;
+    border: 2px solid transparent; /* Додайте цей рядок */
+    border-radius: 5px;
+    transition: border 0.3s ease;
+}
+
+.service-info ul li:hover {
+    border-color: #007aff; /* Змініть цей рядок */
+}
+</style>
+<header class="header">  
+  <div class="container main-container">
+    <a class="logo" href="">
+      <img class="logo_img" src="img/logo/7smol.png" alt="Master Builders VS LTD Logo" >
+    </a>
+    <nav class="navigation-menu" id="main-nav">
+      <ul class="list mob-list">
+        <li class="item">
+          <a class="item-menu" href="wood.html">HOME</a>
+        </li>
+        <li class="item">
+          <a class="item-menu" href="#about-us">ABOUT US</a>
+        </li>
+        <li class="item dropdown">
+          <a class="item-menu" href="#our-services">SERVICES</a>
+        </li>
+        <li class="item">
+          <a class="item-menu" href="#about-material">MATERIALS</a>
+        </li>
+        <li class="item">
+          <a class="item-menu" href="#proj">PROJECTS</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div type="text" class="menu-open" data-menu-open>
+      <img class="z" src="img/menu.svg" alt="Mobile menu" width="35" height="35">
+    </div>
+  </div>
+
+    <div class="mob-menu is-hidden mob-container" data-menu>
+      <div class="mob-wrapp ">
+        <div type="text" class="menu-close" data-menu-close>
+          <img src="img/clear.svg" alt="Button clear" width="35" height="35" >
+        </div>
+        <nav class="nav-menu">
+          <ul class="mob-list">
+            <li class="mob-list_item">
+              <a class="mob-list_link" href="wood.html">НOME</a>
+            </li> 
+            <li class="mob-list_item">
+              <a class="mob-list_link" href="#about-us">ABOUT US</a>
+            </li> 
+            <li class="mob-list_item dropdown2">
+              <a class="mob-list_link" href="#our-services">SERVICES</a>
+              <button class="dropdown-toggle2">▼</button> 
+            </li>  
+            <li class="mob-list_item">
+              <a class="mob-list_link" href="#about-material">MATERIALS</a>
+            </li>
+            <li class="mob-list_item">
+              <a class="mob-list_link" href="#proj">PROJECTS</a>
+            </li> 
+          </ul>
+        </nav>
+      </div>
+    </div>
+</header>
+
+<script src="path_to/flip.min.js"></script>
+<body>
+  <div class="wrap container">
+    <main class="page">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide" >
+            <div class="text-container">
+              <div class="caption">Installation and servicing of air conditioners
+                <p>Stay cool, stay comfortable: your trusted air conditioning experts</p>     
+                <p class="additional-words">
+                  <span>&#10003; Guarantee</span> 
+                  <span>&#10003; Prompt</span> 
+                  <span>&#10003; Competitive</span> 
+                  <span>&#10003; Prices</span>
+                </p>
+              </div>
+            </div>
+            <img src="1-removebg-preview-removebg-preview.png" alt="Slide 1" />
+          </div>
+         
+          <div class="swiper-slide" >
+            <div class="text-container">
+              <div class="caption">Heat pump installation and servicing<p>Efficient heating, reliable performance</p>
+                <p class="additional-words">
+                  <span>&#10003; Guarantee</span> 
+                  <span>&#10003; Prompt</span> 
+                  <span>&#10003; Competitive</span> 
+                  <span>&#10003; Prices</span>
+                </p>
+              </div>
+            </div>
+            <img src="2-removebg-preview.png" alt="Slide 1" />
+          </div>
+
+          <div class="swiper-slide" >
+            <div class="text-container">
+              <div class="caption">Fire damper installation and servicing<p>Safety ensured, peace of mind guaranteed</p>
+                <p class="additional-words">
+                  <span>&#10003; Guarantee</span> 
+                  <span>&#10003; Prompt</span> 
+                  <span>&#10003; Competitive</span> 
+                  <span>&#10003; Prices</span>
+                </p>
+              </div>
+            </div>
+            <img class="fire_img" src="3-removebg-preview.png" alt="Slide 1" />
+          </div>
+
+          <div class="swiper-slide" >
+            <div class="text-container">
+              <div class="caption">Installation and servicing of ventilation systems<p>Breathe easy with our ventilation solutions</p>
+                <p class="additional-words">
+                  <span>&#10003; Guarantee</span> 
+                  <span>&#10003; Prompt</span> 
+                  <span>&#10003; Competitive</span> 
+                  <span>&#10003; Prices</span>
+                </p>
+              </div>
+            </div>
+            <img src="4-removebg-preview.png" alt="Slide 1" />
+          </div>
+    
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+
+
+      <div class="service-offering">
+        <div class="service-image">
+          <img src="block2.jpg" alt="Service Technician">
+        </div>
+        <div class="service-info">
+          <h2>OUR <span>SERVICES:</span></h2>
+          <ul class="services-list">
+            <li>Installation and servicing of air conditioners</li>
+            <li>Heat pump installation and servicing</li>
+            <li>Fire damper installation and servicing</li>
+            <li>Installation and servicing of ventilation systems</li>
+            <li>Prevention</li>
+          </ul>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <button id="backToTopBtn" title="Go to top">⬆️</button>
+
+    <div id="whatsapp-icon" style="display:none;">
+      <a href="https://wa.me/447525459552?text=Online%20assistance%20here">
+        <span>start chat...</span>
+          <img src="whatsapp1.png" alt="WhatsApp Icon">
+      </a>
+      <div id="close-button" onclick="closeWhatsAppIcon()">X</div>
+    </div>
+
+
+  <footer class="footer_bg">
+    <div class="footer-block">
+
+      <div class="a">
+        <div class="wrap_logo" style="display: flex;flex-direction: column;">
+          <a class="footer_logo_link" href="wood.html">
+            <span class="footer_logo">
+              <img src="img/logo/8smol.png" alt="Master Builders VS LTD Logo" oncontextmenu="return false;">
+            </span>
+          </a>
+        </div>
+
+        <div class="footer-menu">
+          <nav class="footer_navigation-menu">
+            <ul class="footer_list_menu">
+              <li class="footer_item_menu">
+                <a class="footer_menu_link" href="wood.html">HOME</a>
+              </li>
+              <li class="footer_item_menu">
+                <a class="footer_menu_link" href="#about-us">ABOUT US</a>
+              </li>
+              <li class="footer_item_menu">
+                <a class="footer_menu_link" href="#our-services">SERVICES</a>
+              </li>
+              <li class="footer_item_menu">
+                <a class="footer_menu_link" href="#about-material">MATERIALS</a>
+              </li>
+              <li class="footer_item_menu">
+                <a class="footer_menu_link" href="#proj">PROJECTS</a>
+              </li>
+              </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div class="b ">
+        <div class="footer-contacts">
+          <h3 class="title_contacts">Contacts</h3>
+            <address>
+              <ul class="footer_list_menu" >
+                <li class= "list-footer-item"><a class="foter-contacts-mail" href="mailto:project@mbvsltd.com">project@mbvsltd.com</a></li>
+                <li class= "list-footer-item"><a class="foter-contacts-tel" href="tel:075 2545 9552">075 2545 9552</a></li>
+                <li class= "list-footer-item"><a class="foter-contacts-tel" href="tel:020 3539 1924">020 3539 1924</a></li>
+              </ul>
+            </address>
+            <div class="sety_footer">
+              <a href="https://www.yell.com/biz/master-builders-vs-ltd-harrow-8851698/" target="_blank">
+               <img class="yell_footer" src="img/yell-icon.png" alt="Yell" style="width: 35px; height: 35px;background-color: #03031a;border-radius: 8px;" >
+              </a>
+              <a href="https://www.linkedin.com/in/vitalii-sopit-8ba5b5162/" target="_blank">
+                <img class="in_footer" src="img/in-icon.png" alt="LinkedIn" style="width: 35px; height: 35px;background-color: #03031a;">
+              </a>
+              <a href="https://www.facebook.com/profile.php?id=61551452585348" target="_blank">
+                <img class="in_footer" src="img/facebook.png" alt="Facebook" style="width: 35px; height: 35px; background-color: #03031a;">
+              </a>
+              <a href="https://www.instagram.com/masterbuildersvsltd/?next=%2F" target="_blank">
+                <img class="in_footer" src="img/instagram.webp" alt="Instagram" style="width: 35px; height: 35px;background-color: #03031a;">
+              </a>
+              <a href="https://wa.me/447525459552?text=Online%20assistance%20here" target="_blank">
+                <img class="in_footer" src="img/whatsapp1.webp" alt="WhatsApp" style="width: 35px; height: 35px;background-color: #03031a;">
+              </a>
+            </div>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+
+
+  // Активне меню та скрол до выдповыдного блоку
+  // Ждем события DOMContentLoaded
+  document.addEventListener('DOMContentLoaded', function() {
+  var currentUrl = window.location.href;
+  var menuLinks = document.querySelectorAll('.item-menu');
+  
+  for (var i = 0; i < menuLinks.length; i++) {
+  // Получаем URL ссылки
+  var linkUrl = menuLinks[i].getAttribute('href');
+  
+  // Проверяем, соответствует ли текущий URL ссылке в меню
+  if (currentUrl === linkUrl) {
+    // Если да, то добавляем класс "active" к элементу меню
+    menuLinks[i].classList.add('active');
+  }
+  }
+  });
+
+
+  (() => {
+  const refs = {
+    openMenuBtn: document.querySelector("[data-menu-open]"),
+    closeMenuBtn: document.querySelector("[data-menu-close]"),
+    menu: document.querySelector("[data-menu]"),
+    body: document.querySelector("body"),
+    menuList: document.querySelector(".mob-list"),
+  };
+
+  refs.openMenuBtn.addEventListener("click", toggleMenu);
+  refs.closeMenuBtn.addEventListener("click", toggleMenu);
+  refs.menuList.addEventListener("click", removeMenu);
+
+  function toggleMenu() {
+    refs.menu.classList.toggle("is-hidden");
+    refs.body.classList.toggle("no-scroll");
+  }
+  function removeMenu() {
+    refs.menu.classList.add("is-hidden");
+    refs.body.classList.remove("no-scroll");
+  }
+})();
+  
+
+
+
+
+
+
+
+
+// Кнопка скролу догори
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("backToTopBtn").style.display = "block";
+  } else {
+    document.getElementById("backToTopBtn").style.display = "none";
+  }
+}
+// When the user clicks on the button, scroll to the top of the document
+document.getElementById("backToTopBtn").addEventListener("click", function() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+});
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      let targetId = this.getAttribute('href');
+      let target = document.querySelector(targetId);
+      if (target) {
+        let headerHeight = document.querySelector('.header').offsetHeight;
+        let targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+
+// ватсап
+window.onload = function() {
+  setTimeout(function() {
+      document.getElementById('whatsapp-icon').style.display = 'block';
+  }, 5000);  // 5000 milliseconds = 5 seconds
+}
+
+function closeWhatsAppIcon() {
+  document.getElementById('whatsapp-icon').style.display = 'none';
+}
+
+
+
+var swiper = new Swiper('.mySwiper', {
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true
+  },
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  loop: true,
+});
+
+
+
+
+
+
+  var cards = document.querySelectorAll('.card');
+cards.forEach(function(card) {
+  card.addEventListener('mouseover', function() {
+    card.classList.add('active');
+  });
+  card.addEventListener('mouseout', function() {
+    card.classList.remove('active');
+  });
+});
+</script>
+
+</body>
+</html>
