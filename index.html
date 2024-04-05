@@ -106,6 +106,58 @@ p {
 .service-info ul li:hover {
     border-color: #007aff; /* Змініть цей рядок */
 }
+.about-us-section {
+    background: #fff;
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .about-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0px 10px;
+    
+  }
+
+  .about-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+    text-decoration-color: #007aff;
+    text-decoration-thickness: 4px;
+  }
+
+  .about-description {
+    color: #666;
+    margin-bottom: 2rem;
+    text-align: justify;
+  }
+
+  .about-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat-number {
+    display: block;
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+
+  }
+
+  .stat-text {
+    font-size: 1rem;
+    color: #666;
+    /* color: #007aff; */
+  }
+
 @media screen and (max-width: 1800px) {
 .additional-words span {
     padding: 20px;
@@ -278,7 +330,6 @@ p {
     </div>
 </header>
 
-<script src="path_to/flip.min.js"></script>
 <body>
   <div class="wrap container">
     <main class="page">
@@ -345,6 +396,34 @@ p {
         </div>
         <div class="swiper-pagination"></div>
       </div>
+
+
+      <!-- Додайте цей блок відразу після закриття тега </header> -->
+
+<section id="about-us" class="about-us-section">
+  <div class="container">
+    <div class="about-inner">
+      <h2 class="about-title">About us</h2>
+      <p class="about-description">In the heart of London, where the demand for technological finesse meets the legacy of British craftsmanship, stands Master Builders VS, a beacon of experience and precision in the field of environmental control systems. With over a decade of dedicated service, our expertise spans across the installation and servicing of air conditioners, ensuring cool serenity in London’s dynamic atmosphere. We extend our proficiency to the realm of renewable energy with adept heat pump services, advocating for eco-friendly solutions.</p>
+      <p class="about-description">Understanding the criticality of safety measures, our team is adept in fire damper installation and servicing, fortifying edifices against unforeseen emergencies. Our adeptness in ventilation systems installation ensures a breath of fresh air amidst the urban sprawl, enhancing living and work spaces with optimal air quality. At the core of our ethos lies preventive measures, a testament to our proactive approach in maintaining the zenith of operational functionality.</p>
+      <p class="about-description">In our practice, confirmed by numerous positive reviews and long-term relationships with clients, our commitment to high-quality work and dedication to ensuring the well-being of our clients is reflected. As experts with years of experience in London in the field of climate control and fire safety, we are committed to providing services with the highest level of integrity, environmental sustainability, and exceptional quality.</p>
+      <div class="about-stats">
+        <div class="stat">
+          <span class="stat-number" data-target="10">11</span>
+          <span class="stat-text">Years in Business</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-target="100">1000</span>
+          <span class="stat-text">Happy Clients</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-target="200">200</span>
+          <span class="stat-text">Projects Completed</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
@@ -546,6 +625,55 @@ function closeWhatsAppIcon() {
 
 
 
+
+// ABOUT US
+function animateCounters() {
+  const counters = document.querySelectorAll('.stat-number');
+  const duration = 3000; // тривалість анімації в мілісекундах
+
+  counters.forEach(counter => {
+    const target = +counter.getAttribute('data-target');
+    const step = (timestamp) => {
+      if (!counter.startTime) { counter.startTime = timestamp; }
+      const elapsed = timestamp - counter.startTime;
+      const progress = Math.min(elapsed / duration, 1); // відсоток завершення анімації
+
+      counter.innerText = Math.floor(progress * (target - 0) + 0);
+
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      } else {
+        counter.innerText = target; // встановити кінцеве значення, коли анімація завершена
+      }
+    };
+
+    window.requestAnimationFrame(step);
+  });
+}
+
+// Анімація запуститься коли статистика стане видимою на екрані
+document.addEventListener('DOMContentLoaded', () => {
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounters();
+        // Зупинити спостереження після того, як анімація була запущена
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.6 }); // 60% елемента повинно бути видимим перед запуском анімації
+
+  // Додавання кожного елемента для спостереження
+  document.querySelectorAll('.stat-number').forEach(counter => {
+    observer.observe(counter);
+  });
+});
+
+
+
+
+
+
 var swiper = new Swiper('.mySwiper', {
   effect: 'fade',
   fadeEffect: {
@@ -576,6 +704,10 @@ cards.forEach(function(card) {
     card.classList.remove('active');
   });
 });
+
+
+
+
 </script>
 
 </body>
