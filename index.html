@@ -19,6 +19,8 @@ height: 600px;
 }
 .swiper-slide img{
   width: 50%;
+  object-fit: contain; /* Cover the container, maintaining aspect ratio */
+  object-position: center;
 }
 .text-container{
   width: 50%;
@@ -76,11 +78,12 @@ p {
   width: 50%; /* Зробити картинку розміром контейнера */
   height: 100%; /* Зробити картинку розміром контейнера */
 
+
 }
 .service-image img{
   width: 100%; /* Зробити картинку розміром контейнера */
   height: 100%; /* Зробити картинку розміром контейнера */
-  object-fit: cover; /* Заповнити контейнер, зберігаючи пропорції та вирівнюючи за шириною або висотою */
+  object-fit: contain; /* Заповнити контейнер, зберігаючи пропорції та вирівнюючи за шириною або висотою */
   object-position: center; /* Вирівняти картинку по центру контейнера */
 }
 .service-info span{
@@ -95,13 +98,125 @@ p {
 .service-info ul li {
     font-size: 28px;
     margin-bottom: 30px;
-    border: 2px solid transparent; /* Додайте цей рядок */
+    border: 4px solid transparent; /* Додайте цей рядок */
     border-radius: 5px;
     transition: border 0.3s ease;
 }
 
 .service-info ul li:hover {
     border-color: #007aff; /* Змініть цей рядок */
+}
+@media screen and (max-width: 1800px) {
+.additional-words span {
+    padding: 20px;
+}
+}
+@media screen and (max-width: 1400px) {
+.additional-words span {
+    padding: 10px;
+}
+.additional-words{
+  display: flex;
+    flex-direction: column;
+}
+.service-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: center;
+    padding-left: 100px;
+}
+.service-info h2 {
+    font-size: 28px;
+    padding-bottom: 10px;
+}
+}
+
+@media screen and (max-width: 1200px) {
+.swiper-slide {
+    height: 400px;
+    display: flex;
+}
+.additional-words {
+    padding: 0px 10px;
+}
+.caption p {
+    margin: 10px 0px;
+}
+.caption {
+    font-size: 28px;
+    margin: 10px;
+}
+.service-info {
+    padding-left: 40px;
+}
+.service-info ul li {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+}
+
+
+@media screen and (max-width: 900px) {
+.service-info h2 {
+    font-size: 24px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.service-info ul li {
+    font-size: 18px;
+    margin-bottom: 0px;
+}
+}
+@media screen and (max-width: 768px) {
+  .swiper-slide {
+    height: 360px;
+}
+  .additional-words span {
+    padding: 4px;
+}
+.caption {
+    font-size: 24px;
+    margin: 4px;
+}
+.service-offering {
+    display: flex;
+    flex-direction: column;
+}
+.service-image {
+    width: 100%;
+    height: 100%;
+}
+
+  /* .service-info {
+    order: 1;
+  }
+
+  .service-image {
+    order: 2; 
+  } */
+}
+
+
+@media screen and (max-width: 460px) {
+.additional-words span {
+    padding: 0px;
+}
+.swiper-slide {
+    height: 300px;
+}
+.caption p span {
+    display: none;
+}
+}
+@media screen and (max-width: 400px) {
+  .caption {
+    font-size: 20px;
+    margin: 4px;
+}
+.caption p {
+    font-size: 16px;
+}
 }
 </style>
 <header class="header">  
