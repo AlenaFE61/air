@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
 
-  <title>Wood Services</title>
+  <title>Air Services</title>
   <meta name="description" content="">
 </head>
 <style>
@@ -158,6 +158,87 @@ p {
     /* color: #007aff; */
   }
 
+
+
+
+  .service-detail-section {
+  background: #fff;
+  padding: 4rem 0;
+  text-align: center;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+  /* border-top: 5px solid #007aff;
+  border-bottom: 5px solid #007aff; */
+  /* margin: 50px 0px; */
+}
+
+.service-detail-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 10px;
+  background: url('path-to-your-background-image.jpg') no-repeat center center;
+  background-size: cover;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.service-detail-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.service-detail-content {
+  color: #666;
+  text-align: justify;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.service-detail-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.service-detail-content ul li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 1rem;
+}
+
+.service-detail-content ul li:before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: #007aff;
+}
+
+.service-detail-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.service-detail-title {
+  /* Keep your existing styles and add the ones below */
+  flex: 1;
+  margin-right: 20px; /* Adjust spacing between title and image */
+}
+
+.service-detail-image {
+    width: 50%;
+    height: auto;
+}
+.grey{
+background: #F7F7F7;
+}
+
+
+
+
+
+
+
 @media screen and (max-width: 1800px) {
 .additional-words span {
     padding: 20px;
@@ -239,14 +320,29 @@ p {
     width: 100%;
     height: 100%;
 }
-
-  /* .service-info {
-    order: 1;
+.service-detail-section {
+    padding: 2rem 0;
   }
 
-  .service-image {
-    order: 2; 
-  } */
+  .service-detail-inner {
+    padding: 0 5px;
+  }
+
+  .service-detail-content {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+  .service-detail-header {
+    flex-wrap: wrap;
+}
+.service-detail-title {
+    font-size: 2rem;
+    width: 100%;
+}
+.service-detail-image {
+    width: 100%;
+    height: auto;
+}
 }
 
 
@@ -287,12 +383,6 @@ p {
         <li class="item dropdown">
           <a class="item-menu" href="#our-services">SERVICES</a>
         </li>
-        <li class="item">
-          <a class="item-menu" href="#about-material">MATERIALS</a>
-        </li>
-        <li class="item">
-          <a class="item-menu" href="#proj">PROJECTS</a>
-        </li>
       </ul>
     </nav>
 
@@ -318,12 +408,6 @@ p {
               <a class="mob-list_link" href="#our-services">SERVICES</a>
               <button class="dropdown-toggle2">▼</button> 
             </li>  
-            <li class="mob-list_item">
-              <a class="mob-list_link" href="#about-material">MATERIALS</a>
-            </li>
-            <li class="mob-list_item">
-              <a class="mob-list_link" href="#proj">PROJECTS</a>
-            </li> 
           </ul>
         </nav>
       </div>
@@ -403,7 +487,7 @@ p {
 <section id="about-us" class="about-us-section">
   <div class="container">
     <div class="about-inner">
-      <h2 class="about-title">About us</h2>
+      <h2 class="about-title">ABOUT US</h2>
       <p class="about-description">In the heart of London, where the demand for technological finesse meets the legacy of British craftsmanship, stands Master Builders VS, a beacon of experience and precision in the field of environmental control systems. With over a decade of dedicated service, our expertise spans across the installation and servicing of air conditioners, ensuring cool serenity in London’s dynamic atmosphere. We extend our proficiency to the realm of renewable energy with adept heat pump services, advocating for eco-friendly solutions.</p>
       <p class="about-description">Understanding the criticality of safety measures, our team is adept in fire damper installation and servicing, fortifying edifices against unforeseen emergencies. Our adeptness in ventilation systems installation ensures a breath of fresh air amidst the urban sprawl, enhancing living and work spaces with optimal air quality. At the core of our ethos lies preventive measures, a testament to our proactive approach in maintaining the zenith of operational functionality.</p>
       <p class="about-description">In our practice, confirmed by numerous positive reviews and long-term relationships with clients, our commitment to high-quality work and dedication to ensuring the well-being of our clients is reflected. As experts with years of experience in London in the field of climate control and fire safety, we are committed to providing services with the highest level of integrity, environmental sustainability, and exceptional quality.</p>
@@ -442,6 +526,50 @@ p {
           </ul>
         </div>
       </div>
+
+      <section class="service-detail-section">
+        <div class="container">
+          <div class="service-detail-inner">
+            <div class="service-detail-header">
+              <h2 class="service-detail-title">Installation and servicing of air conditioners</h2>
+              <img src="air_cod.webp" alt="Air Conditioner" class="service-detail-image" />
+            </div>
+            <div class="service-detail-content">
+              <p>Explore our installation, maintenance, and repair services for air conditioners in London. Our qualified specialists will install and set up your air conditioner, ensuring a comfortable climate in your home or office. We offer installation, maintenance, and repair services using the latest technologies and equipment. Our team is ready to help you maintain the optimal air quality in your space. Contact us to provide your space with the best air conditioning system.</p>
+              <p style="padding:20px 10px ">Types of air conditioners:</p>
+              <ul>
+                <li><p>PORTABLE AIR CONDITIONERS</p>Portable air conditioners, also known as monobloc or self-contained units, are ideal for cooling single rooms. They are easy to move between rooms thanks to their wheels and do not require permanent installation. These units have an attached hose that expels hot air outside through a nearby window. They are a great option when permanent installation is not feasible due to space constraints or building restrictions.</li>
+                <li><p>SPLIT AIR CONDITIONERS</p>Split air conditioning systems consist of two main components: an outdoor condensing unit and an indoor evaporator. These units are quieter and more efficient than portable models but require professional installation. The outdoor unit contains a compressor that circulates refrigerant, which absorbs heat from the indoor air and releases it outside. The indoor unit blows cooled air into the room.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="service-detail-section grey">
+        <div class="container">
+          <div class="service-detail-inner">
+            <div class="service-detail-header">
+              <h2 class="service-detail-title">Heat pump installation and servicing</h2>
+              <img src="air_heat.webp" alt="Air Conditioner" class="service-detail-image" />
+            </div>
+            <div class="service-detail-content">
+              <p>Explore our installation, maintenance, and repair services for heat pumps in London. Our qualified specialists will install and set up your heat pump, ensuring optimal heating and cooling efficiency in your home or office. We offer comprehensive services using the latest technologies and equipment to ensure your heat pump operates at its best. Our team is dedicated to providing you with the best indoor climate control solutions. Contact us to provide your space with the best heat pump system.</p>
+              <p style="padding:20px 10px ">Types of heat pumps::</p>
+              <ul>
+                <li><p>AIR SOURCE HEAT PUMPS</p>Air source heat pumps extract heat from the outside air and transfer it into your home or office to provide heating. They work efficiently even in cold climates, making them a cost-effective and environmentally friendly heating solution.</li>
+                <li><p>GROUND SOURCE HEAT PUMPS</p>Ground source heat pumps use pipes buried underground to extract heat from the ground. They are highly efficient and can provide both heating and cooling, making them a versatile choice for residential and commercial buildings.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+      
+
+
+
 
     </main>
   </div>
