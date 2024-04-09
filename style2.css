@@ -1,4 +1,319 @@
+.swiper-slide{
+  background: linear-gradient(135deg, #4e5c62, #18afe1, #FFFFFF, #65c3e3, #073d52);
+height: 600px;
+  display: flex;
+}
+.swiper-slide img{
+  width: 50%;
+  object-fit: contain; /* Cover the container, maintaining aspect ratio */
+  object-position: center;
+}
+.text-container{
+  width: 50%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.swiper {
+    padding-top: 50px;
+}
+.fire_img{
+  width: 35%;
+  margin: 0 auto;
+}
+.swiper-slide .fire_img {
+    width: 35%;
+}
+.additional-words span{
+  text-transform: uppercase;
+}
+.caption {
+  font-size: 24px;
+  font-weight: bold;
+}
 
+p {
+  font-size: 18px;
+}
+.caption{
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.caption p{
+  margin-top: 20px;
+}
+.additional-words{
+  padding: 40px 10px;
+}
+.additional-words span{
+  padding: 40px;
+}
+.service-offering{
+  display: flex;
+}
+.service-info{
+     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: center;
+    padding-left: 200px;
+}
+.service-image{
+  width: 50%; /* Зробити картинку розміром контейнера */
+  height: 100%; /* Зробити картинку розміром контейнера */
+}
+.service-image img{
+  width: 100%; /* Зробити картинку розміром контейнера */
+  height: 100%; /* Зробити картинку розміром контейнера */
+  object-fit: contain; /* Заповнити контейнер, зберігаючи пропорції та вирівнюючи за шириною або висотою */
+  object-position: center; /* Вирівняти картинку по центру контейнера */
+}
+.service-info span{
+  text-decoration: underline;
+  text-decoration-color: #007aff;
+  text-decoration-thickness: 4px;
+}
+.service-info h2{
+  font-size: 24px;
+    padding-bottom: 50px;
+}
+.service-info ul li {
+    font-size: 28px;
+    margin-bottom: 30px;
+    border: 4px solid transparent; /* Додайте цей рядок */
+    border-radius: 5px;
+    transition: border 0.3s ease;
+}
+
+.service-info ul li:hover {
+    border-color: #007aff; /* Змініть цей рядок */
+}
+.about-us-section {
+    background: #fff;
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .about-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0px 10px;
+    
+  }
+  .about-title {
+    color: #333;
+    text-decoration: underline;
+    text-decoration-color: #007aff;
+    text-decoration-thickness: 4px;
+    font-size: 24px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+  .about-description {
+    color: #666;
+    margin-bottom: 2rem;
+    text-align: justify;
+  }
+  .about-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+  }
+  .stat {
+    text-align: center;
+  }
+  .stat-number {
+    display: block;
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+  }
+  .stat-text {
+    font-size: 1rem;
+    color: #666;
+  }
+
+  .service-detail-section {
+  background: #fff;
+  padding: 1rem 0 0 0;
+  text-align: center;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+}
+.service-detail-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  background: url('path-to-your-background-image.jpg') no-repeat center center;
+  background-size: cover;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+.service-detail-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin: 10px;
+}
+.service-detail-content {
+  color: #666;
+  text-align: justify;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 1rem;
+  border-radius: 10px;
+}
+.service-detail-content ul {
+  list-style: none;
+  padding: 0;
+}
+.service-detail-content ul li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 1rem;
+}
+.service-detail-content ul li:before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: #007aff;
+}
+.service-detail-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.service-detail-image {
+    width: 50%;
+    height: auto;
+}
+.grey{
+background: #F7F7F7;
+}
+
+
+
+@media screen and (max-width: 1800px) {
+.additional-words span {
+    padding: 20px;
+}
+}
+@media screen and (max-width: 1400px) {
+.additional-words span {
+    padding: 10px;
+}
+.additional-words{
+  display: flex;
+    flex-direction: column;
+}
+.service-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: center;
+    padding-left: 100px;
+}
+.service-info h2 {
+    font-size: 28px;
+    padding-bottom: 10px;
+}
+}
+
+@media screen and (max-width: 1200px) {
+.swiper-slide {
+    height: 400px;
+    display: flex;
+}
+.additional-words {
+    padding: 0px 10px;
+}
+.caption p {
+    margin: 10px 0px;
+}
+.caption {
+    font-size: 28px;
+    margin: 10px;
+}
+.service-info {
+    padding-left: 40px;
+}
+.service-info ul li {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+}
+
+
+@media screen and (max-width: 900px) {
+.service-info h2 {
+    font-size: 24px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.service-info ul li {
+    font-size: 18px;
+    margin-bottom: 0px;
+}
+}
+@media screen and (max-width: 768px) {
+  .swiper-slide {
+    height: 360px;
+}
+  .additional-words span {
+    padding: 4px;
+}
+.caption {
+    font-size: 24px;
+    margin: 4px;
+}
+.service-offering {
+    display: flex;
+    flex-direction: column;
+}
+.service-image {
+    width: 100%;
+    height: 100%;
+}
+
+  .service-detail-inner {
+    padding: 0 5px;
+  }
+
+  .service-detail-content {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+  .service-detail-header {
+    flex-wrap: wrap;
+}
+.service-detail-title {
+    font-size: 20px;
+    width: 100%;
+}
+.service-detail-image {
+    width: 100%;
+    height: auto;
+}
+}
+
+
+@media screen and (max-width: 460px) {
+.additional-words span {
+    padding: 0px;
+}
+.swiper-slide {
+    height: 300px;
+}
+.caption p span {
+    display: none;
+}
+}
+@media screen and (max-width: 400px) {
+  .caption {
+    font-size: 20px;
+    margin: 4px;
+}
+.caption p {
+    font-size: 16px;
+}
+}
 
 
 
