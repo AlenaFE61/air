@@ -6,12 +6,16 @@
   <link rel="icon" href="img/favicons/favicon.ico" type="image/x-icon">
   <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style2.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-
   <title>Air Services</title>
   <meta name="description" content="">
 </head>
+
 <style>
+
+
+
 .swiper-slide{
   background: linear-gradient(135deg, #4e5c62, #18afe1, #FFFFFF, #65c3e3, #073d52);
 height: 600px;
@@ -73,12 +77,9 @@ p {
     justify-content: center;
     padding-left: 200px;
 }
-
 .service-image{
   width: 50%; /* Зробити картинку розміром контейнера */
   height: 100%; /* Зробити картинку розміром контейнера */
-
-
 }
 .service-image img{
   width: 100%; /* Зробити картинку розміром контейнера */
@@ -92,7 +93,7 @@ p {
   text-decoration-thickness: 4px;
 }
 .service-info h2{
-  font-size: 32px;
+  font-size: 24px;
     padding-bottom: 50px;
 }
 .service-info ul li {
@@ -118,75 +119,58 @@ p {
     padding: 0px 10px;
     
   }
-
   .about-title {
-    font-size: 2.5rem;
     color: #333;
-    margin-bottom: 1rem;
     text-decoration: underline;
     text-decoration-color: #007aff;
     text-decoration-thickness: 4px;
+    font-size: 24px;
+    padding-bottom: 10px;
+    padding-top: 10px;
   }
-
   .about-description {
     color: #666;
     margin-bottom: 2rem;
     text-align: justify;
   }
-
   .about-stats {
     display: flex;
     justify-content: space-around;
     margin-top: 2rem;
   }
-
   .stat {
     text-align: center;
   }
-
   .stat-number {
     display: block;
     font-size: 2rem;
     color: #333;
     font-weight: bold;
-
   }
-
   .stat-text {
     font-size: 1rem;
     color: #666;
-    /* color: #007aff; */
   }
-
-
-
 
   .service-detail-section {
   background: #fff;
-  padding: 4rem 0;
+  padding: 1rem 0 0 0;
   text-align: center;
   box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
-  /* border-top: 5px solid #007aff;
-  border-bottom: 5px solid #007aff; */
-  /* margin: 50px 0px; */
 }
-
 .service-detail-inner {
   max-width: 900px;
   margin: 0 auto;
-  padding: 0 10px;
   background: url('path-to-your-background-image.jpg') no-repeat center center;
   background-size: cover;
   border: 1px solid #ddd;
   box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
-
 .service-detail-title {
-  font-size: 2.5rem;
-  color: #333;
-  margin-bottom: 1rem;
+    font-size: 2.5rem;
+    color: #333;
+    margin: 10px;
 }
-
 .service-detail-content {
   color: #666;
   text-align: justify;
@@ -194,37 +178,26 @@ p {
   padding: 1rem;
   border-radius: 10px;
 }
-
 .service-detail-content ul {
   list-style: none;
   padding: 0;
 }
-
 .service-detail-content ul li {
   position: relative;
   padding-left: 30px;
   margin-bottom: 1rem;
 }
-
 .service-detail-content ul li:before {
   content: '✔';
   position: absolute;
   left: 0;
   color: #007aff;
 }
-
 .service-detail-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
-.service-detail-title {
-  /* Keep your existing styles and add the ones below */
-  flex: 1;
-  margin-right: 20px; /* Adjust spacing between title and image */
-}
-
 .service-detail-image {
     width: 50%;
     height: auto;
@@ -232,11 +205,125 @@ p {
 .grey{
 background: #F7F7F7;
 }
+.order-service-button {
+    width: 263px;
+    padding: 10px 20px;
+    font-size: 24px;
+    border: 4px solid #c6dbf1;
+    border-radius: 8px;
+    background-color: white;
+    color: black;
+    cursor: not-allowed;
+    box-sizing: border-box;
+    transition: border 0.3s ease;
+}
+.order-service-button:hover{
+  border: 4px solid #007aff;
+  transition: border 0.3s ease;
+}
 
 
 
+.service-order-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #4e5c62, #18afe1, #FFFFFF, #65c3e3, #073d52);
+}
 
+.form-container, .image-container {
+  width: 50%; /* Each takes up half the container */
 
+}
+
+.form-container {
+  padding: 30px;
+  max-width: 600px; /* Maximum width of the form */
+  width: 100%; /* Make the form take full width of its container */
+  margin: auto; /* Center the form container */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Add some shadow for depth */
+  background-color: white; /* Background color for the form */
+  border-radius: 8px; /* Rounded corners for the form container */
+}
+.form-container h2{
+  margin-bottom: 50px;
+    margin-top: 50px;
+    font-size: 28px;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: #007aff;
+    text-decoration-thickness: 4px;
+}
+.form-text{
+  margin-bottom: 20px;
+  font-size: 24px;
+    text-align: center;
+}
+.image-container img {
+  width: 100%; /* Make sure the image fills the container */
+  height: auto; /* Keep the aspect ratio */
+  object-fit: cover; /* Cover the container */
+}
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+  width: calc(100% - 20px); /* Adjust width to account for padding */
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 24px;
+}
+
+input[type="checkbox"] {
+    margin:0 20px;
+}
+
+.form_btn {
+  width: 263px;
+    padding: 10px 10px;
+    font-size: 24px;
+    border: 4px solid #c6dbf1;
+    border-radius: 8px;
+    background-color: white;
+    color: black;
+    cursor: not-allowed;
+    box-sizing: border-box;
+    transition: border 0.3s ease;
+}
+
+.form_btn:hover {
+  border: 4px solid #007aff;
+  transition: border 0.3s ease;
+}
+.wrapp-send{
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+.wrapp-send label{
+padding-left: 20px;
+}
+.privacy-policy-container{
+  display: flex;
+}
+.privacy-policy a{
+  font-size: 18px;
+}
+.privacy-policy-container a {
+  text-decoration: underline; /* This will underline the link */
+  color: #007aff; /* This will give the link a standard blue color */
+  cursor: pointer; /* This changes the mouse to a pointer when hovering over the link */
+}
+
+.privacy-policy-container a:hover {
+  color: #005f8b; /* Darker shade for hover effect */
+}
+.accept{
+ font-size: 20px;
+}
 
 
 @media screen and (max-width: 1800px) {
@@ -287,8 +374,21 @@ background: #F7F7F7;
     font-size: 22px;
     margin-bottom: 10px;
 }
+.form-container {
+    padding: 10px;
+    width: 50%;
 }
-
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+  width: 100%;
+}
+.form-container h2 {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+}
 
 @media screen and (max-width: 900px) {
 .service-info h2 {
@@ -299,6 +399,14 @@ background: #F7F7F7;
 .service-info ul li {
     font-size: 18px;
     margin-bottom: 0px;
+}
+.service-order-section {
+  flex-direction: column;
+}
+.form-container {
+    padding: 10px;
+    margin: 20px 0px;
+    width: 100%;
 }
 }
 @media screen and (max-width: 768px) {
@@ -320,9 +428,6 @@ background: #F7F7F7;
     width: 100%;
     height: 100%;
 }
-.service-detail-section {
-    padding: 2rem 0;
-  }
 
   .service-detail-inner {
     padding: 0 5px;
@@ -336,7 +441,7 @@ background: #F7F7F7;
     flex-wrap: wrap;
 }
 .service-detail-title {
-    font-size: 2rem;
+    font-size: 20px;
     width: 100%;
 }
 .service-detail-image {
@@ -356,6 +461,29 @@ background: #F7F7F7;
 .caption p span {
     display: none;
 }
+.form_btn {
+    width: 160px;
+    padding: 6px 6px;
+    font-size: 20px;
+}
+.form-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.form-text {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+  margin-bottom: 10px;
+}
+.wrapp-send {
+    margin: 5px;
+}
 }
 @media screen and (max-width: 400px) {
   .caption {
@@ -366,7 +494,24 @@ background: #F7F7F7;
     font-size: 16px;
 }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </style>
+
 <header class="header">  
   <div class="container main-container">
     <a class="logo" href="">
@@ -493,15 +638,15 @@ background: #F7F7F7;
       <p class="about-description">In our practice, confirmed by numerous positive reviews and long-term relationships with clients, our commitment to high-quality work and dedication to ensuring the well-being of our clients is reflected. As experts with years of experience in London in the field of climate control and fire safety, we are committed to providing services with the highest level of integrity, environmental sustainability, and exceptional quality.</p>
       <div class="about-stats">
         <div class="stat">
-          <span class="stat-number" data-target="10">11</span>
+          <span class="stat-number" data-target="11">11</span>
           <span class="stat-text">Years in Business</span>
         </div>
         <div class="stat">
-          <span class="stat-number" data-target="100">1000</span>
+          <span class="stat-number" data-target="1085">1085</span>
           <span class="stat-text">Happy Clients</span>
         </div>
         <div class="stat">
-          <span class="stat-number" data-target="200">200</span>
+          <span class="stat-number" data-target="350">350</span>
           <span class="stat-text">Projects Completed</span>
         </div>
       </div>
@@ -518,16 +663,17 @@ background: #F7F7F7;
         <div class="service-info">
           <h2>OUR <span>SERVICES:</span></h2>
           <ul class="services-list">
-            <li>Installation and servicing of air conditioners</li>
-            <li>Heat pump installation and servicing</li>
-            <li>Fire damper installation and servicing</li>
-            <li>Installation and servicing of ventilation systems</li>
-            <li>Prevention</li>
+            <li><a href="#service-air-conditioners">Installation and servicing of air conditioners</a></li>
+            <li><a href="#service-heat-pumps">Heat pump installation and servicing</a></li>
+            <li><a href="#service-fire-dampers">Fire damper installation and servicing</a></li>
+            <li><a href="#service-ventilation-systems">Installation and servicing of ventilation systems</a></li>
+            <li><a href="#service-prevention">Prevention</a></li>
           </ul>
+          <a href="#order-service-form" class="order-service-button">ORDER SERVICES</a>
         </div>
       </div>
 
-      <section class="service-detail-section">
+      <section class="service-detail-section" id="service-air-conditioners">
         <div class="container">
           <div class="service-detail-inner">
             <div class="service-detail-header">
@@ -546,7 +692,7 @@ background: #F7F7F7;
         </div>
       </section>
 
-      <section class="service-detail-section grey">
+      <section class="service-detail-section grey" id="service-heat-pumps">
         <div class="container">
           <div class="service-detail-inner">
             <div class="service-detail-header">
@@ -555,7 +701,7 @@ background: #F7F7F7;
             </div>
             <div class="service-detail-content">
               <p>Explore our installation, maintenance, and repair services for heat pumps in London. Our qualified specialists will install and set up your heat pump, ensuring optimal heating and cooling efficiency in your home or office. We offer comprehensive services using the latest technologies and equipment to ensure your heat pump operates at its best. Our team is dedicated to providing you with the best indoor climate control solutions. Contact us to provide your space with the best heat pump system.</p>
-              <p style="padding:20px 10px ">Types of heat pumps::</p>
+              <p style="padding:20px 10px ">Types of heat pumps:</p>
               <ul>
                 <li><p>AIR SOURCE HEAT PUMPS</p>Air source heat pumps extract heat from the outside air and transfer it into your home or office to provide heating. They work efficiently even in cold climates, making them a cost-effective and environmentally friendly heating solution.</li>
                 <li><p>GROUND SOURCE HEAT PUMPS</p>Ground source heat pumps use pipes buried underground to extract heat from the ground. They are highly efficient and can provide both heating and cooling, making them a versatile choice for residential and commercial buildings.</li>
@@ -566,6 +712,102 @@ background: #F7F7F7;
       </section>
 
       
+      <section class="service-detail-section" id="service-fire-dampers">
+        <div class="container">
+          <div class="service-detail-inner">
+            <div class="service-detail-header">
+              <h2 class="service-detail-title">Fire damper installation and servicing</h2>
+              <img src="fire_dump.webp" alt="Air Conditioner" class="service-detail-image" />
+            </div>
+            <div class="service-detail-content">
+              <p>Discover our comprehensive installation, maintenance, and repair services for fire dampers in London. Our qualified technicians will install and configure your fire dampers, ensuring the safety and compliance of your building's fire protection system. We offer a full range of services using the latest technologies and equipment to ensure your fire dampers are operating efficiently and effectively. Our team is committed to providing you with the best fire protection solutions for your building. Contact us to ensure your space is equipped with the best fire damper system.</p>
+              <p style="padding:20px 10px ">Types of fire dampers:</p>
+              <ul>
+                <li><p>FIRE DAMPER TESTING AND INSPECTION</p>Fire dampers play a crucial role in preventing the spread of fire and smoke through ductwork in buildings. Regular testing and inspection of fire dampers are essential to ensure they are functioning correctly and comply with regulations. Our team can perform thorough testing and inspection of your fire dampers to ensure they are in optimal working condition.</li>
+                <li><p>FIRE DAMPER REPAIR AND MAINTENANCE</p>Regular maintenance and repair of fire dampers are necessary to ensure they remain effective in the event of a fire. Our technicians are experienced in servicing and repairing all types of fire dampers, ensuring they meet safety standards and regulations. We use the latest equipment and techniques to ensure your fire dampers are functioning correctly and provide maximum protection.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="service-detail-section" id="service-ventilation-systems">
+        <div class="container">
+          <div class="service-detail-inner">
+            <div class="service-detail-header">
+              <h2 class="service-detail-title">Installation and servicing of ventilation systems</h2>
+              <img src="vent.webp" alt="Air Conditioner" class="service-detail-image" />
+            </div>
+            <div class="service-detail-content">
+              <p>Discover our comprehensive installation, maintenance, and repair services for fire dampers in London. Our qualified technicians will install and configure your fire dampers, ensuring the safety and compliance of your building's fire protection system. We offer a full range of services using the latest technologies and equipment to ensure your fire dampers are operating efficiently and effectively. Our team is committed to providing you with the best fire protection solutions for your building. Contact us to ensure your space is equipped with the best fire damper system.</p>
+              <p style="padding:20px 10px ">Types of fire dampers:</p>
+              <ul>
+                <li><p>MECHANICAL VENTILATION</p>This system uses fans to exhaust stale air and introduce fresh air into the building. We can install and maintain various types of mechanical ventilation systems, including heat recovery ventilation (HRV) and energy recovery ventilation (ERV) systems, which help reduce energy costs by recovering heat or coolness from the exhaust air.</li>
+                <li><p>NATURAL VENTILATION</p>We also provide installation and servicing for natural ventilation systems, which rely on natural airflow and pressure differences to ventilate a building. Properly designed natural ventilation can improve indoor air quality and reduce the need for mechanical ventilation.</li>
+                <li><p>MIXED-MODE VENTILATION</p>This system combines natural and mechanical ventilation strategies to optimize airflow and energy efficiency. Our experts can design and install mixed-mode ventilation systems tailored to your building's specific requirements.</li>
+                <li><p>VENTILATION SYSTEM MAINTENANCE</p>Regular maintenance is crucial to ensure your ventilation system operates efficiently and effectively. Our maintenance services include cleaning, filter replacement, and system inspections to identify and address any issues early on.</li>
+                <li><p>REPAIRS AND UPGRADES</p> If your ventilation system is not performing as it should, our team can diagnose and repair any issues promptly. We can also recommend and implement upgrades to improve system performance and energy efficiency.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="service-detail-section" id="service-prevention">
+        <div class="container">
+          <div class="service-detail-inner">
+            <div class="service-detail-header">
+              <h2 class="service-detail-title">Prevention services for HVAC systems</h2>
+              <img src="preven.webp" alt="Air Conditioner" class="service-detail-image" />
+            </div>
+            <div class="service-detail-content">
+              <p>Our prevention services are designed to ensure the efficient and reliable operation of your HVAC systems. We offer a range of services to help identify and address issues before they lead to costly repairs or downtime.</p>
+              <p style="padding:20px 10px ">Our prevention services include:</p>
+              <ul>
+                <li><p>REGULAR INSPECTIONS</p>We conduct regular inspections of your HVAC systems to identify any potential issues or areas that may require attention. Our technicians will thoroughly inspect all components of your system and provide recommendations for any necessary repairs or upgrades.</li>
+                <li><p>CLEANING AND MAINTENANCE</p> We offer professional cleaning and maintenance services to ensure your HVAC systems remain clean and free of debris. Regular cleaning can improve system performance and extend the life of your equipment.</li>
+                <li><p>FILTER REPLACEMENT</p>We replace filters regularly to ensure optimal performance and air quality. Dirty filters can restrict airflow and cause your system to work harder, leading to higher energy bills and potential damage to your equipment.</li>
+                <li><p>DUCT INSPECTION AND CLEANING</p>Our technicians will inspect and clean your ductwork to remove any accumulated dirt, dust, or debris. Clean ducts can improve air quality and system efficiency.</li>
+                <li><p>SYSTEM ADJUSTMENTS AND CALIBRATION</p> We can adjust and calibrate your HVAC systems to ensure they are operating at peak performance. This can help improve energy efficiency and comfort levels in your building.</li>
+                <li><p>ENVIRONMENTAL MONITORING</p>We offer environmental monitoring services to ensure your indoor air quality remains at an optimal level. We can provide recommendations for improvements if needed.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+      <section id="order-service-form" class="service-order-section">
+
+          <div class="form-container">
+            <!-- Your form goes here -->
+            <h2>ORDER SERVICES</h2>
+            <p class="form-text" >Leave your contacts.</p>
+            <p class="form-text" >We will get in touch with you as soon as possible.</p>
+            <form action="/submit-your-form-handler" method="post">
+              <input type="text" name="name" placeholder="What is your name?" required>
+              <input type="tel" name="phone" placeholder="Your phone number" required>
+              <input type="email" name="email" placeholder="E-mail" required>
+              <textarea name="comment" placeholder="Comment"></textarea>
+              <div class="wrapp-send">
+                <button class="form_btn" type="submit">SUBMIT</button>
+                  <div class="privacy-policy-container">
+                    <input type="checkbox" id="privacy-policy" name="privacy_policy" required>
+                      <div for="privacy-policy">
+                        <p class="accept" >I accept the terms of the <a href="privacy-policy.html"> privacy policy</a></p>
+                      </div>
+                  </div>
+              </div>
+            </form>
+          </div>
+          <div class="image-container">
+            <!-- Your image goes here -->
+            <img src="zyro-image (8).png" alt="Descriptive Alt Text">
+          </div>
+
+      </section>
       
 
 
