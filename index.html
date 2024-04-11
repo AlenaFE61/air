@@ -177,6 +177,7 @@ p {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 1rem;
   border-radius: 10px;
+  padding-bottom: 50px;
 }
 .service-detail-content ul {
   list-style: none;
@@ -186,6 +187,7 @@ p {
   position: relative;
   padding-left: 30px;
   margin-bottom: 1rem;
+  font-size: 18px;
 }
 .service-detail-content ul li:before {
   content: '✔';
@@ -203,7 +205,7 @@ p {
     height: auto;
 }
 .grey{
-background: #F7F7F7;
+background: #0d95e50d;
 }
 .order-service-button {
     width: 263px;
@@ -213,7 +215,7 @@ background: #F7F7F7;
     border-radius: 8px;
     background-color: white;
     color: black;
-    cursor: not-allowed;
+    cursor: pointer;
     box-sizing: border-box;
     transition: border 0.3s ease;
 }
@@ -288,7 +290,7 @@ input[type="checkbox"] {
     border-radius: 8px;
     background-color: white;
     color: black;
-    cursor: not-allowed;
+    cursor: pointer;
     box-sizing: border-box;
     transition: border 0.3s ease;
 }
@@ -324,6 +326,86 @@ padding-left: 20px;
 .accept{
  font-size: 20px;
 }
+
+
+
+
+
+
+
+.page{
+background: white;
+}
+.swiper-button-next, .swiper-button-prev {
+  position: absolute;
+  top: auto;
+  bottom: 10px;
+}
+.swiper-button-next {
+  right: 10px;
+}
+.swiper-button-prev {
+  left: 10px;
+}
+.swiper-pagination {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+.swiper-pagination{
+  bottom: 30px;
+}
+.swiper-cube-shadow{
+  display: none;
+}
+.swiper-custom-prev, .swiper-custom-next {
+  border: 4px solid #c6dbf1;
+  padding: 10px 20px;
+  font-size: 18px;
+  position: absolute;
+  bottom: 10px;
+  z-index: 10;
+  border-radius: 8px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: border 0.3s ease;
+}
+
+.swiper-custom-prev:hover, 
+.swiper-custom-next:hover {
+  border: 4px solid #007aff;
+  padding: 10px 20px;
+  font-size: 18px;
+  transition: border 0.3s ease;
+}
+.swiper-custom-prev {
+  left: 10px;
+}
+
+.swiper-custom-next {
+  right: 10px;
+}
+.serv_title{
+  text-decoration: underline;
+text-decoration-color: black;
+text-decoration-thickness: 2px;
+color:black;
+
+}
+.ac-images-container{
+  display: flex;
+    justify-content: space-between;
+    text-align: center;
+    flex-wrap: wrap;
+}
+.ac-image img{
+  width: 160px;
+}
+
+
 
 
 @media screen and (max-width: 1800px) {
@@ -383,6 +465,7 @@ input[type="tel"],
 input[type="email"],
 textarea {
   width: 100%;
+  font-size: 18px;
 }
 .form-container h2 {
     margin-bottom: 20px;
@@ -656,7 +739,7 @@ textarea {
 
 
 
-      <div class="service-offering">
+      <div class="service-offering grey">
         <div class="service-image">
           <img src="block2.jpg" alt="Service Technician">
         </div>
@@ -673,6 +756,7 @@ textarea {
         </div>
       </div>
 
+
       <section class="service-detail-section" id="service-air-conditioners">
         <div class="container">
           <div class="service-detail-inner">
@@ -680,17 +764,78 @@ textarea {
               <h2 class="service-detail-title">Installation and servicing of air conditioners</h2>
               <img src="air_cod.webp" alt="Air Conditioner" class="service-detail-image" />
             </div>
-            <div class="service-detail-content">
-              <p>Explore our installation, maintenance, and repair services for air conditioners in London. Our qualified specialists will install and set up your air conditioner, ensuring a comfortable climate in your home or office. We offer installation, maintenance, and repair services using the latest technologies and equipment. Our team is ready to help you maintain the optimal air quality in your space. Contact us to provide your space with the best air conditioning system.</p>
-              <p style="padding:20px 10px ">Types of air conditioners:</p>
-              <ul>
-                <li><p>PORTABLE AIR CONDITIONERS</p>Portable air conditioners, also known as monobloc or self-contained units, are ideal for cooling single rooms. They are easy to move between rooms thanks to their wheels and do not require permanent installation. These units have an attached hose that expels hot air outside through a nearby window. They are a great option when permanent installation is not feasible due to space constraints or building restrictions.</li>
-                <li><p>SPLIT AIR CONDITIONERS</p>Split air conditioning systems consist of two main components: an outdoor condensing unit and an indoor evaporator. These units are quieter and more efficient than portable models but require professional installation. The outdoor unit contains a compressor that circulates refrigerant, which absorbs heat from the indoor air and releases it outside. The indoor unit blows cooled air into the room.</li>
-              </ul>
+            <div class="service-detail-content swiper-container secondSwiper">
+              <div class="swiper-wrapper">
+                <!-- Start of the individual swiper-slide -->
+                <div class="swiper-slide">
+                  <div class="page page1">
+                          <p>Explore our installation, maintenance, and repair services for air conditioners in London. Our qualified specialists will install and set up your air conditioner, ensuring a comfortable climate in your home or office. We offer installation, maintenance, and repair services using the latest technologies and equipment. Our team is ready to help you maintain the optimal air quality in your space. Contact us to provide your space with the best air conditioning system.</p>
+                          <p style="padding:20px 10px;font-weight: 600;">Types of air conditioners:</p>
+                          <ul>
+                            <li><p class="serv_title">PORTABLE AIR CONDITIONERS</p>Portable air conditioners, also known as monobloc or self-contained units, are ideal for cooling single rooms. They are easy to move between rooms thanks to their wheels and do not require permanent installation. These units have an attached hose that expels hot air outside through a nearby window. They are a great option when permanent installation is not feasible due to space constraints or building restrictions.</li>
+                            <li><p class="serv_title">SPLIT AIR CONDITIONERS</p>Split air conditioning systems consist of two main components: an outdoor condensing unit and an indoor evaporator. These units are quieter and more efficient than portable models but require professional installation. The outdoor unit contains a compressor that circulates refrigerant, which absorbs heat from the indoor air and releases it outside. The indoor unit blows cooled air into the room.</li>
+                          </ul>
+                        </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="page page2">
+                    <p style="font-weight: 600;">Pros and cons of air conditioners.</p>
+                    <p style="padding:20px 10px;">The benefit of using an air conditioning system is undeniable: it provides comfort both in the heat and in the cold, improves the quality of the air, and makes it fresher and more useful.</p>
+                    <p style="padding:20px 10px;font-weight: 600;">Using an air conditioner in the house has several advantages:</p>
+                    <ul>
+                      <li>Indoor temperature control without the need to open windows, which is more hygienic and safer.</li>
+                      <li>Protection against insects in spring and summer, especially against mosquitoes, flies, gnats, and bugs, ensuring a high level of hygiene and cleanliness of the premises.</li>
+                      <li>Absence of harmful effects on children, pets, and people with weak immunity, but on the contrary, creating comfortable conditions for their stay.</li>
+                      <li>The availability of programs for simple and convenient use of the "Auto mode" function, which allows even the elderly, teenagers, and children to control the air conditioner.</li>
+                      <li>Quick elimination of unpleasant odors arising during cooking, from the vital activity of domestic animals, after using household chemicals, disinfectants, insecticides, and others.</li>
+                    </ul>
+                    <p style="padding:20px 10px ">Quick elimination of unpleasant odors arising during cooking, from the vital activity of domestic animals, after using household chemicals, disinfectants, insecticides, and others. Of course, when using an air conditioner in the house, there is also a drawback - the air can be overdried, which negatively affects the condition of the mucous membranes and respiratory tract and can aggravate chronic diseases. However, this problem can be quickly solved by using a humidifier, which allows you to increase the level of humidity and fill it with aromas using essential oils, essences, and other additives.</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="page page3">
+                    <p style="font-weight: 600;">Common air conditioner malfunctions are often associated with various aspects of their operation. Here are a few of them:</p>
+                    <div class="ac-images-container">
+                      <div class="ac-image">
+                        <img src="icon/1.png" alt="Air Conditioner 1">
+                        <p style="font-weight: 600;">Freon leak</p>
+                      </div>
+                      <div class="ac-image">
+                        <img src="icon/2.webp" alt="Air Conditioner 2">
+                        <p style="font-weight: 600;">Dirty filter</p>
+                      </div>
+                      <div class="ac-image">
+                        <img src="icon/3.webp" alt="Air Conditioner 3">
+                        <p style="font-weight: 600;">Thermostat not working</p>
+                      </div>
+                      <div class="ac-image">
+                        <img src="icon/4.webp" alt="Air Conditioner 4">
+                        <p style="font-weight: 600;">Incorrect operation</p>
+                      </div>
+                      <div class="ac-image">
+                        <img src="icon/5.webp" alt="Air Conditioner 5">
+                        <p style="font-weight: 600;">Operational noise</p>
+                      </div>
+                      <div class="ac-image">
+                        <img src="icon/6-removebg-preview.png" alt="Air Conditioner 6">
+                        <p style="font-weight: 600;">System freezing</p>
+                      </div>
+                    </div>
+                    <p style="padding:20px 10px;">These malfunctions can be detected during regular maintenance and technical inspection of air conditioners. It is recommended to call a qualified technician for diagnostics and repair in the event of any of these problems.</p>
+                  </div>
+                </div>
+                <!-- End of the individual swiper-slide -->
+              </div>
+              <!-- Navigation arrows -->
+              <div class="swiper-custom-prev">Prev</div>
+              <div class="swiper-custom-next">Next</div>
+              <!-- Pagination -->
+              <!-- <div class="swiper-pagination"></div> -->
             </div>
           </div>
         </div>
       </section>
+      
 
       <section class="service-detail-section grey" id="service-heat-pumps">
         <div class="container">
@@ -699,13 +844,79 @@ textarea {
               <h2 class="service-detail-title">Heat pump installation and servicing</h2>
               <img src="air_heat.webp" alt="Air Conditioner" class="service-detail-image" />
             </div>
-            <div class="service-detail-content">
-              <p>Explore our installation, maintenance, and repair services for heat pumps in London. Our qualified specialists will install and set up your heat pump, ensuring optimal heating and cooling efficiency in your home or office. We offer comprehensive services using the latest technologies and equipment to ensure your heat pump operates at its best. Our team is dedicated to providing you with the best indoor climate control solutions. Contact us to provide your space with the best heat pump system.</p>
-              <p style="padding:20px 10px ">Types of heat pumps:</p>
-              <ul>
-                <li><p>AIR SOURCE HEAT PUMPS</p>Air source heat pumps extract heat from the outside air and transfer it into your home or office to provide heating. They work efficiently even in cold climates, making them a cost-effective and environmentally friendly heating solution.</li>
-                <li><p>GROUND SOURCE HEAT PUMPS</p>Ground source heat pumps use pipes buried underground to extract heat from the ground. They are highly efficient and can provide both heating and cooling, making them a versatile choice for residential and commercial buildings.</li>
-              </ul>
+            <div class="service-detail-content swiper-container secondSwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="page page1">
+                    <p>Delve into our specialized heat pump solutions in London. With a team of certified professionals, we seamlessly integrate heat pumps into your environment, elevating both warmth and coolness to meet your exacting standards. Our portfolio spans from state-of-the-art installations to meticulous maintenance and precision repairs, employing cutting-edge tools and technologies. Committed to optimizing your indoor ambiance, we're at your service to enrich your property with a superior heat pump solution tailored to your needs. Reach out for unparalleled climate control expertise.</p>
+                    <p style="padding:20px 10px;font-weight: 600;">Types of heat pumps:</p>
+                      <ul>
+                        <li><p class="serv_title">AIR SOURCE HEAT PUMPS</p>Air source heat pumps extract heat from the outside air and transfer it into your home or office to provide heating. They work efficiently even in cold climates, making them a cost-effective and environmentally friendly heating solution.</li>
+                        <li><p class="serv_title">GROUND SOURCE HEAT PUMPS</p>Ground source heat pumps use pipes buried underground to extract heat from the ground. They are highly efficient and can provide both heating and cooling, making them a versatile choice for residential and commercial buildings.</li>
+                      </ul>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="page page2">
+                    <p style="padding:20px 10px;font-weight: 600;">Key advantages of our heat pump services:</p>
+                    <ul>
+                      <li><p class="serv_title">ENERGI EFFICIENCY</p>Heat pumps reduce energy use and heating/cooling costs compared to traditional systems by efficiently transferring heat.</li>
+                      <li><p class="serv_title">ECO-FRENDLY</p>By minimizing CO2 emissions, heat pumps support environmental sustainability and the fight against climate change.</li>
+                      <li><p class="serv_title">DURABILITY</p>Regular maintenance extends the above-average lifespan of heat pumps, ensuring long-term performance.</li>
+                      <li><p class="serv_title">SEASONAL MAINTENANCE</p>Routine checks ensure heat pumps run efficiently all year, preventing weather-related issues.</li>
+                      <li><p class="serv_title">TAILORED SOLUTIONS</p>We specialize in selecting and fitting the ideal heat pump for your specific residential or commercial needs.</li>
+                      <li><p class="serv_title">SYSTEM INTEGRATION</p>Integrating heat pumps with existing systems boosts overall energy efficiency for your property.</li>
+                      <li><p class="serv_title">TECHNOLOGICAL ADVANCEMENTS</p>Our use of cutting-edge technologies enhances the performance and appeal of our heat pump solutions.</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="page page3">
+                    <p style="font-weight: 600;">Heat pumps are complex systems, and like any mechanical systems, they can experience issues. Some of the most common malfunctions in heat pumps include:</p>
+                    <div class="ac-images-container">
+                      <div class="ac-image">
+                        <img src="icon/1.1.webp" alt="Air Conditioner 1">
+                        <p style="font-weight: 600;">Refrigerant leaks</p>
+                      </div>
+                      <div class="ac-image">
+                        <img src="icon/2.2.webp" alt="Air Conditioner 2">
+                        <p style="font-weight: 600;">Compressor issues</p>
+                      </div>
+                      <div class="ac-image">
+                        <img src="icon/2.3 (1).png" alt="Air Conditioner 3">
+                        <p style="font-weight: 600;">Icing over</p>
+                      </div>
+                      <div class="ac-image">
+                        <img src="icon/2.4_1.png" alt="Air Conditioner 4">
+                        <p style="font-weight: 600;">Faulty thermostats</p>
+                      </div>
+                      <div class="ac-image">
+                        <img src="icon/2.5.png" alt="Air Conditioner 5">
+                        <p style="font-weight: 600;">Electrical problems</p>
+                      </div>
+                      <div class="ac-image">
+                        <img src="icon/2.6.png" alt="Air Conditioner 6">
+                        <p style="font-weight: 600;">Dirty or clogged filters</p>
+                      </div>
+                      <div class="ac-image">
+                        <img src="icon/2.7-removebg-preview.png" alt="Air Conditioner 7">
+                        <p style="font-weight: 600;">Broken reversing valve</p>
+                      </div>
+                      <div class="ac-image">
+                        <img src="icon/2.8.png" alt="Air Conditioner 8">
+                        <p style="font-weight: 600;">Outdoor unit not running</p>
+                      </div>
+                    </div>
+                    <p style="padding:20px 10px;">For these common issues, it is advisable to conduct regular checks and have a reliable maintenance service in place. In the event of any problems, it is best to contact professional services that can accurately diagnose and address the issue to restore optimal functionality to your heat pump system.</p>
+                  </div>
+                </div>
+                <!-- End of the individual swiper-slide -->
+              </div>
+              <!-- Navigation arrows -->
+              <div class="swiper-custom-prev">Prev</div>
+              <div class="swiper-custom-next">Next</div>
+              <!-- Pagination -->
+              <!-- <div class="swiper-pagination"></div> -->
             </div>
           </div>
         </div>
@@ -732,7 +943,7 @@ textarea {
       </section>
 
 
-      <section class="service-detail-section" id="service-ventilation-systems">
+      <section class="service-detail-section grey" id="service-ventilation-systems">
         <div class="container">
           <div class="service-detail-inner">
             <div class="service-detail-header">
@@ -749,6 +960,9 @@ textarea {
                 <li><p>VENTILATION SYSTEM MAINTENANCE</p>Regular maintenance is crucial to ensure your ventilation system operates efficiently and effectively. Our maintenance services include cleaning, filter replacement, and system inspections to identify and address any issues early on.</li>
                 <li><p>REPAIRS AND UPGRADES</p> If your ventilation system is not performing as it should, our team can diagnose and repair any issues promptly. We can also recommend and implement upgrades to improve system performance and energy efficiency.</li>
               </ul>
+
+
+
             </div>
           </div>
         </div>
@@ -1044,6 +1258,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+
+
+
+// Initialize the first swiper
 var swiper = new Swiper('.mySwiper', {
   effect: 'fade',
   fadeEffect: {
@@ -1065,18 +1283,47 @@ var swiper = new Swiper('.mySwiper', {
 
 
 
-  var cards = document.querySelectorAll('.card');
-cards.forEach(function(card) {
-  card.addEventListener('mouseover', function() {
-    card.classList.add('active');
-  });
-  card.addEventListener('mouseout', function() {
-    card.classList.remove('active');
-  });
+document.addEventListener('DOMContentLoaded', function() {
+  // Swiper initialization for each service section
+  initializeSwiper('service-air-conditioners');
+  initializeSwiper('service-heat-pumps');
+  initializeSwiper('service-fire-dampers');
+  initializeSwiper('service-ventilation-systems');
+  initializeSwiper('service-prevention');
+  // ... initialize other service sections as needed ...
 });
 
-
-
+function initializeSwiper(serviceId) {
+  const swiperContainer = document.querySelector(`#${serviceId} .swiper-container`);
+  if (swiperContainer) {
+    new Swiper(swiperContainer, {
+      // Swiper options here
+      effect: 'cube',
+      cubeEffect: {
+        rotate: 30,
+        slideShadows: false,
+      },
+      loop: true,
+      // autoplay: {
+      //   delay: 5000,
+      //   disableOnInteraction: false,
+      // },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-custom-next',
+        prevEl: '.swiper-custom-prev',
+      },
+      on: {
+        init: function () {
+          // Custom initialization logic if necessary
+        },
+      },
+    });
+  }
+}
 
 </script>
 
