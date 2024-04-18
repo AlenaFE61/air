@@ -143,7 +143,6 @@ p {
 .service-detail-inner {
   max-width: 900px;
   margin: 0 auto;
-  background: url('path-to-your-background-image.jpg') no-repeat center center;
   background-size: cover;
   border: 1px solid #ddd;
   box-shadow: 0 0 20px rgba(0,0,0,0.1);

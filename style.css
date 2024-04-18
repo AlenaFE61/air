@@ -172,7 +172,7 @@ body {
 .b{
   flex-wrap: wrap;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   width: 100%;
 }
 .wrap_logo{
@@ -234,11 +234,11 @@ body {
   color: #ffffff;
   font-style: normal;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 18px;
   list-style: none;
   text-transform: uppercase;
   max-height: 204px;
-  columns: 2;
+  columns: 1;
   column-gap: 15px;
 }
 .footer_item_categories,
@@ -313,7 +313,7 @@ font-size: 16px;
   z-index: 1;
   list-style-type: none;
   padding: 0;
-  background-color: #F7F7F7; 
+  background-color: white;
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
   width:260px;
   border-radius:10px;
@@ -461,7 +461,7 @@ font-size: 16px;
   font-size: 20px;
 }
 .footer-contacts{
-  padding-right: 70px;
+  padding-left: 20px;
 }
 .dropdown-menu{
   max-width: 120px;
@@ -475,8 +475,18 @@ font-size: 16px;
 	padding-left:20px;
 }
 .footer_bg {
-  padding-right: 0px;
-  padding-left: 100px;
+  height: 474px;
+}
+.footer-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.b {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
 }
 }
 
@@ -513,9 +523,6 @@ margin-left: 0px;
 }
 .img1 img {
     height: 400px;
-}
-.footer_bg {
-    height: 340px;
 }
 .footer-contacts {
   padding-right: 50px;
@@ -585,6 +592,24 @@ margin-left: 0px;
     text-align: center;
 }
 }
+
+@media screen and (max-width: 640px){
+  .wrap_logo{
+    margin: 0 auto;
+  }
+  .a {
+    display: block;
+    width: 100%;
+  }
+  .b {
+    display: block;
+    text-align: center;
+   }
+   .footer_bg {
+    height: 816px;
+}
+}
+
 @media screen and (max-width: 540px){
 .navigation-menu{
   display: none;
@@ -666,7 +691,7 @@ margin-left: 0px;
   padding-top: 10px;
 }
 .footer_bg {
-  height: 710px;
+  height: 790px;
   padding-right: 20px;
   padding-left: 20px;
 }
@@ -692,13 +717,7 @@ margin-left: 0px;
 .footer_logo{
   padding-bottom: 10px;
 }
-.a {
-	display: block;
-  width: 100%;
-}
-.b {
-  display: block;
- }
+
 .footer_list_categories {
   columns: 1;
   height: auto;
