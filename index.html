@@ -617,6 +617,26 @@ textarea {
         </li>
         <li class="item dropdown">
           <a class="item-menu" href="#our-services">SERVICES</a>
+          <ul class="dropdown-menu">
+            <li class="dropdown serv-item-wrap">
+              <a href="#service-air-conditioners">Installation and servicing of air conditioners</a>
+            </li>
+            <li class="dropdown serv-item-wrap">
+              <a href="#service-heat-pumps">Heat pump installation and servicing</a>
+            </li>
+            <li class="dropdown serv-item-wrap">
+              <a href="#service-fire-dampers">Fire damper installation and servicing</a>
+            </li>
+            <li class="dropdown serv-item-wrap">
+              <a href="#service-ventilation-systems">Installation and servicing of ventilation systems</a>
+            </li>
+            <li class="dropdown serv-item-wrap">
+              <a href="#service-prevention">Prevention services for HVAC systems</a>
+            </li>
+          </ul>
+        </li>
+        <li class="item">
+          <a class="item-menu" href="#order-service-form">ORDER</a>
         </li>
       </ul>
     </nav>
@@ -642,7 +662,27 @@ textarea {
             <li class="mob-list_item dropdown2">
               <a class="mob-list_link" href="#our-services">SERVICES</a>
               <button class="dropdown-toggle2">▼</button> 
-            </li>  
+              <ul class="dropdown-menu2 dropdown-menu2-mob">
+                <li class="dropdown-menu2-mob-list" >
+                  <a href="#service-air-conditioners">Air conditioning</a>
+                </li>
+                <li class="dropdown-menu2-mob-list" >
+                  <a href="#service-heat-pumps">Heat pumps</a>
+                </li>
+                <li class="dropdown-menu2-mob-list" >
+                  <a href="#service-fire-dampers">Fire dampers</a>
+                </li>
+                <li class="dropdown-menu2-mob-list" >
+                  <a href="#service-ventilation-systems">Ventilation systems</a>
+                </li>
+                <li class="dropdown-menu2-mob-list" >
+                  <a href="#service-prevention">Prevention services</a>
+                </li>
+              </ul>
+            </li>
+            <li class="mob-list_item">
+              <a class="mob-list_link" href="#order-service-form">ORDER</a>
+            </li>   
           </ul>
         </nav>
       </div>
@@ -746,7 +786,7 @@ textarea {
 
 
 
-      <div class="service-offering grey">
+      <div class="service-offering grey" id="our-services">
         <div class="service-image">
           <img src="block2.jpg" alt="Service Technician">
         </div>
@@ -1253,12 +1293,6 @@ textarea {
               <li class="footer_item_menu">
                 <a class="footer_menu_link" href="#our-services">SERVICES</a>
               </li>
-              <li class="footer_item_menu">
-                <a class="footer_menu_link" href="#about-material">MATERIALS</a>
-              </li>
-              <li class="footer_item_menu">
-                <a class="footer_menu_link" href="#proj">PROJECTS</a>
-              </li>
               </ul>
           </nav>
         </div>
@@ -1344,6 +1378,70 @@ textarea {
   
 
 
+
+document.addEventListener("DOMContentLoaded", function() {
+  function closeAllDropdowns(exceptMenu = null) {
+    document.querySelectorAll('.dropdown-menu2').forEach(function(menu) {
+      if (menu !== exceptMenu) {
+        menu.style.display = 'none';
+      }
+    });
+  }
+
+  var desktopToggles = document.querySelectorAll('.dropdown-toggle2');
+  desktopToggles.forEach(function(toggle) {
+    var menu = toggle.nextElementSibling;
+    toggle.parentNode.addEventListener('mouseover', function() {
+      menu.style.display = 'block';
+    });
+    toggle.parentNode.addEventListener('mouseout', function() {
+      menu.style.display = 'none';
+    });
+  });
+
+  var mobileToggles = document.querySelectorAll('.dropdown2 .dropdown-toggle2');
+  mobileToggles.forEach(function(toggle) {
+    toggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      var dropdownMenu = toggle.nextElementSibling;
+      closeAllDropdowns(dropdownMenu);
+      var isMenuVisible = dropdownMenu.style.display === 'block';
+      dropdownMenu.style.display = isMenuVisible ? 'none' : 'block';
+    });
+  });
+
+  // Handle click events outside of dropdowns to close them
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.dropdown2')) {
+      closeAllDropdowns();
+    }
+  });
+
+  // Smooth scrolling for anchor links
+  document.querySelectorAll('.mob-list_link, .dropdown-menu2 a').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      var targetId = link.getAttribute('href');
+      if (targetId.startsWith('#')) {
+        e.preventDefault();
+        const target = document.querySelector(targetId);
+        if (target) {
+          const headerHeight = document.querySelector('.header').offsetHeight;
+          const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+          // Close the mobile menu after smooth scrolling
+          const mobMenu = document.querySelector(".mob-menu");
+          if (mobMenu) {
+            mobMenu.classList.add("is-hidden");
+            document.body.classList.remove("no-scroll");
+          }
+        }
+      }
+    });
+  });
+});
 
 
 
@@ -1440,10 +1538,6 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(counter);
   });
 });
-
-
-
-
 
 
 
